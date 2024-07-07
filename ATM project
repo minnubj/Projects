@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main()
+{
+    int choice,accountBalance=1000,dep,withdrawal,repeat,mini[10],i=0;
+    
+    
+    for(;;){
+        
+    printf("Please Select any option\n1 for Deposit\n2 for Withdrawal\n3 for Balance equriy\n4 for Mini statement\n");
+    scanf("%d",&choice);
+    switch(choice){
+        case 1:
+        printf("Enter the amount to Deposit =");
+        scanf("%d",&dep);
+        accountBalance=accountBalance+dep;
+        mini[i]=dep;
+        i++;
+        break;
+        
+        case 2:
+        printf("enter the amount for Withdrawal\n");
+        scanf("%d",&withdrawal);
+        accountBalance=accountBalance-withdrawal;
+        mini[i]=(withdrawal*-1);
+        i++;
+        break;
+        
+        case 3:
+        printf("Balance Enquire!\n"); 
+        printf("Account Balance = %d\n",accountBalance);
+        break;
+        
+        case 4 :
+        printf("Mini statement :");
+        printf("Deposit :%d\n",dep);
+        printf("withdrawal :%d\n",(withdrawal*-1));
+        break;
+        
+        
+    }
+    printf("Do you Want to Continue? Yes=1\nNo=2\n Please input your choice\n");
+    scanf("%d",&repeat);
+    if(repeat==2){
+        break;
+    }
+    }
+    
+    return 0;
+}
